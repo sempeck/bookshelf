@@ -12,7 +12,6 @@ class BooksController < ApplicationController
       if @book.save 
         redirect_to @book
       else 
-      #jeśli nie przekieruje, to w formularzu pojawi się pisana treść. Ona nie zostanie utracona.
       	render 'new'
       end
   end
@@ -27,7 +26,6 @@ class BooksController < ApplicationController
 
   def update
 	@book = Book.find(params[:id])
-	# nie wiem czy tu powinny być wszystkie te elementy
 		if @book.update(params[:book].permit(:title, :name, :surname, :subtitle, :isbn, :color, :category, :tags, :lease, :cover))
 			redirect_to @book
 		else
