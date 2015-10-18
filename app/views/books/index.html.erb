@@ -1,5 +1,6 @@
-<% @books.each do |book| %>
-  <div class="book_wrapper">
+<div class="book_wrapper">
+	<% @books.each do |book| %>
+  
     <h2 class="title"><%= link_to book.title, book %></h2>
   <h3><%=h book.subtitle %></h3>
 	  <p><%= book.name %> <%= book.surname %></p>
