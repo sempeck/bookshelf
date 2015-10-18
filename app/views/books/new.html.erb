@@ -1,0 +1,26 @@
+<h1>Nowa książka</h1>
+
+<%= form_for :book, url: books_path do |f| %>
+  
+  <p>
+	  <%= f.label 'Tytuł' %><br>
+	  <%= f.text_field :title %>
+  </p>
+  <p>
+	  <%= f.label 'Podtytuł' %><br>
+	  <%= f.text_field :subtitle %>
+  </p>
+  <p>
+	  <%= f.label 'Imię' %><br>
+	  <%= f.text_field :name %>
+  </p>
+  <p>
+	  <%= f.label 'Nazwisko' %><br>
+	  <%= f.text_field :surname %>
+  </p>
+  <p>
+      <%= f.submit %>
+   </p>
+
+
+	<% end %>
