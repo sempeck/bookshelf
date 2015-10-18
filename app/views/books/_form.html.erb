@@ -1,0 +1,65 @@
+<%= form_for @book do |f| %>
+      
+      <!-- powiadomienie flash -->
+      <% if @book.errors.any? %>
+        <div id="errors">
+          <h2><%= pluralize(@book.errors.count, "error") %> prevented this book from saving</h2>
+            <ul>
+              <% @book.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+        </div>
+      <% end %>
+
+      <p>
+    	  <%= f.label 'title' %><br>
+    	  <%= f.text_field :title %>
+      </p>
+      <p>
+    	  <%= f.label 'subtitle' %><br>
+    	  <%= f.text_field :subtitle %>
+      </p>
+      <p>
+    	  <%= f.label 'name' %><br>
+    	  <%= f.text_field :name %>
+      </p>
+      <p>
+    	  <%= f.label 'surname' %><br>
+    	  <%= f.text_field :surname %>
+      </p>
+
+      <p>
+        <%= f.label 'ISBN' %><br>
+        <%= f.text_field :isbn %>
+      </p>
+
+      <p>
+        <%= f.label 'color' %><br>
+        <%= f.text_field :color %>
+      </p>
+      
+      <p>
+        <%= f.label 'category' %><br>
+        <%= f.text_field :category %>
+      </p>
+      <p>
+        <%= f.label 'tags' %><br>
+        <%= f.text_field :tags %>
+      </p>
+      <p>
+        <%= f.label 'lease' %><br>
+        <%= f.text_field :lease %>
+      </p>
+      <p>
+        <%= f.label 'cover' %><br>
+        <%= f.text_field :cover %>
+      </p>
+      
+
+      <p>
+          <%= f.submit %>
+       </p>
+
+
+    	<% end %>

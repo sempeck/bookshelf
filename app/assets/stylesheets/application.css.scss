@@ -17,7 +17,7 @@
 @import 'normalize';
 
 html, body {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -41,8 +41,10 @@ a {
 	#logo {
 		width: 40px;
 		position: absolute;
-		right: 3em;
+		right: 2em;
 		top: 3em;
+
+		padding-right: 3em;
 	}
 	ul {
 		list-style: none;
