@@ -14,9 +14,11 @@
 		  <p><%= @book.cover %></p>
 		  <br>
 
+ <% if user_signed_in? %>
    <p> 
    	<%= link_to 'Edit', edit_book_path(@book) %> | 
     <%= link_to 'Delete', book_path(@book), method: :delete, data: { confirm: 'Are you sure?' } %>
    </p>
+ <% end %>
 
-</div>
+</div> 

@@ -48,5 +48,7 @@ group :development do
 
   gem 'will_paginate'
 
+  gem 'devise'
+
 end
 

@@ -1,4 +1,7 @@
 class BooksController < ApplicationController
+
+  before_action :authenticate_user!, except: [:index, :show] #co się pokaże, gdy nie jest się zalogowanym
+
   def index
     @books = Book.paginate :page => params[:page], :per_page => 10
   end
