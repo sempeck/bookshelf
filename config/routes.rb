@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   resources :books
   root 'books#index'
 
-  get '/about', to: 'pages#about'   
+  get '/about', to: 'pages#about'
+
+
 
 
     # The priority is based upon order of creation: first created -> highest priority.

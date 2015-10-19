@@ -23,7 +23,7 @@
 		     </ul>
 
 		     <% if !user_signed_in? %>
-			<p class="sign_in">Admin login</p>
+			<p class="sign_in"><%= link_to "Admin login", new_user_session_path %></p>
 			<% end %>	
 	  </div>
 	  
